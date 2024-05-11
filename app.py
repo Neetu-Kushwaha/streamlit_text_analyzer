@@ -70,6 +70,10 @@ def main():
         # Save feedback to a CSV file
         save_feedback(feedback_dict)
 
+        # Add a button to download the feedback CSV file
+        if st.button("Download Feedback CSV"):
+            download_feedback_csv(feedback_dict)
+
 
 def display_entry(df, text_index, answer_index):
     # Create columns layout with text and answer side by side
